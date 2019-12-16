@@ -1,4 +1,4 @@
-import { NAME } from './constants';
+import { NAME } from '../constants';
 import { State } from './state';
 import { createSelector } from 'reselect';
 

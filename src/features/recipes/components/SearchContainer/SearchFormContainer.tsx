@@ -1,5 +1,5 @@
 import React from 'react';
-import { actions as snackbarActions } from '../../../snackbar';
+import * as recipeActions from '../../statemanagement/actions';
 import { connect } from 'react-redux';
 import Form from '../Form/Form';
 import './SearchFormContainer.scss';
@@ -17,7 +17,7 @@ export const SearchFormContainer = ({handleSubmitForm}: Props) => {
 }
 
 const mapDispatchToProps = {
-    handleSubmitForm: (message: string) => snackbarActions.success(message),
+    handleSubmitForm: recipeActions.formSubmitted,
 };
 
 export default connect(null, mapDispatchToProps)(SearchFormContainer);

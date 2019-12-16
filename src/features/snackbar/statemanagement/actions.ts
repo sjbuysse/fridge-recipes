@@ -1,5 +1,5 @@
-import { CLEAR_NOTIFICATION_REQUESTED, ERROR, SnackbarActionTypes, SUCCESS, WARNING } from "./actionTypes";
-import { Notification } from './model/notification.interface';
+import { CLEAR_NOTIFICATION, ERROR, SnackbarActionTypes, SUCCESS, WARNING } from "./actionTypes";
+import { Notification } from '../model/notification.interface';
 
 
 export const success = (message: string): SnackbarActionTypes => ({
@@ -10,7 +10,7 @@ export const success = (message: string): SnackbarActionTypes => ({
 });
 
 export const clearNotification = (notification: Notification): SnackbarActionTypes => ({
-    type: CLEAR_NOTIFICATION_REQUESTED,
+    type: CLEAR_NOTIFICATION,
     payload: {
         notification
     }

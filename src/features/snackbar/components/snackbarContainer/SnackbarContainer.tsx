@@ -1,11 +1,11 @@
 import React, { Dispatch } from 'react';
 import { Notification } from '../../model/notification.interface';
 import { connect } from 'react-redux';
-import { getAll } from '../../selectors';
+import { getAll } from '../../statemanagement/selectors';
 import './SnackbarContainer.scss';
-import SnackbarContent from '../SnackbarContent/SnackbarContent';
-import { clearNotification } from '../../actions';
-import { SnackbarActionTypes } from '../../actionTypes';
+import SnackbarContent from '../snackbarContent/SnackbarContent';
+import { clearNotification } from '../../statemanagement/actions';
+import { SnackbarActionTypes } from '../../statemanagement/actionTypes';
 
 interface Props {
     notifications: Notification[];

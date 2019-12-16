@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import * as notifications from '../features/snackbar';
+import * as snackbar from '../features/snackbar';
+import * as recipes from '../features/recipes';
 
 export default combineReducers({
-    [notifications.constants.NAME]: notifications.reducer
+    [snackbar.constants.NAME]: snackbar.reducer,
+    [recipes.constants.NAME]: recipes.reducer
 });

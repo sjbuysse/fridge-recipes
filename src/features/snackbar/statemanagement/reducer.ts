@@ -1,6 +1,6 @@
 import { initialState, State } from './state';
-import { CLEAR_NOTIFICATION_REQUESTED, ERROR, SnackbarActionTypes, SUCCESS, WARNING } from './actionTypes';
-import { createNotification, NotificationType } from './model/notification.interface';
+import { CLEAR_NOTIFICATION, ERROR, SnackbarActionTypes, SUCCESS, WARNING } from './actionTypes';
+import { createNotification, NotificationType } from '../model/notification.interface';
 
 export default function reducer(state = initialState, action: SnackbarActionTypes): State {
     switch (action.type) {
@@ -19,7 +19,7 @@ export default function reducer(state = initialState, action: SnackbarActionType
                 ...state,
                 snackbar: [...state.snackbar, createNotification(action.payload.message, NotificationType.WARNING)],
             };
-        case CLEAR_NOTIFICATION_REQUESTED:
+        case CLEAR_NOTIFICATION:
             return {
                 ...state,
                 snackbar: state.snackbar.filter(notification => notification !== action.payload.notification),

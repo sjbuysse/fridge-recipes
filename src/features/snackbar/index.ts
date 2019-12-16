@@ -1,7 +1,8 @@
-import * as actions from './actions';
+import * as actions from './statemanagement/actions';
+import * as model from './model';
+import * as components from './components';
 import * as constants from './constants';
-import reducer from './reducer';
-import * as selectors from './selectors';
+import reducer from './statemanagement/reducer';
+import * as selectors from './statemanagement/selectors';
 
-export * from './components';
-export { actions, constants, reducer, selectors };
+export { actions, model, components, constants, reducer, selectors };

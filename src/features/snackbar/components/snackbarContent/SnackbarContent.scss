@@ -1,0 +1,37 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.snackbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  animation: fadeIn 1s;
+
+  &-closebutton {
+    cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  &--success {
+    background-color: #00b16a;
+  }
+
+  &--warning {
+    background-color: #fcd670;
+  }
+
+  &--error {
+    background-color: #ec644b;
+  }
+}

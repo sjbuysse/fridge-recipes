@@ -1,3 +1,3 @@
-import SnackbarContainer from './SnackbarContainer/SnackbarContainer';
+import SnackbarContainer from './snackbarContainer/SnackbarContainer';
 
 export { SnackbarContainer }
